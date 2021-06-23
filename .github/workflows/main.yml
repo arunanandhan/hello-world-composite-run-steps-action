@@ -10,6 +10,10 @@ jobs:
     name: A job to say hello
     steps:
       - uses: actions/checkout@v2
+      - name: PWD
+        run: pwd
+      - name: LS
+        run: ls
       - name: Grant execute permission for goodbye.sh
         run: chmod +x goodbye.sh
       - name: Greet
