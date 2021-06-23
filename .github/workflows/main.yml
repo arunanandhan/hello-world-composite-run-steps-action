@@ -10,6 +10,8 @@ jobs:
     name: A job to say hello
     steps:
       - uses: actions/checkout@v2
+      - name: Grant execute permission for goodbye.sh
+        run: chmod +x goodbye.sh
       - name: Greet
         id: foo
         uses: arunanandhan/hello-world-composite-run-steps-action@main
