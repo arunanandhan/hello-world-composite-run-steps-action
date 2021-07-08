@@ -24,5 +24,3 @@ jobs:
       - name: Random
         run: echo random-number is ${{ steps.foo.outputs.random-number }}
         shell: bash
-      - name: action-path
-        run:  echo ${{ github.action_path }}
