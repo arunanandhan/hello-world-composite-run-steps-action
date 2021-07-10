@@ -1,1 +1,14 @@
+name: 'Arun's Composite Workflow'
 
+on: 
+  push:
+    branches: [ main ]
+
+jobs: 
+  First-Job:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-20.04
+    steps:
+       step1:
+         - name: First Step
+           run: echo pwd
