@@ -16,6 +16,8 @@ jobs:
        - name: Second-Step
          id: action-file
          uses: ./.github/actions/module
+         with:
+           name: "Arunkumar Anandhan"
        - name: Third-Step
          run: |
            echo ${{ steps.action-file.outputs.random-number }}
