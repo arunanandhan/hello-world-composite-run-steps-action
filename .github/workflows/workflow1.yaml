@@ -37,12 +37,13 @@ jobs:
          uses: ./.github/actions/module
          with:
            name: "Arunkumar Anandhan"
+           ref: ${{ needs.Init-Job.outputs.ref }}
        - name: Step3
          run: |
            echo ${{ steps.action-file.outputs.random-number }}
        - name: Step4
          run: |
-           echo ${{ needs.Init-Job.outputs.ref }}
+           echo $ref
          
 
 
