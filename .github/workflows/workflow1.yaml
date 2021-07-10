@@ -8,9 +8,23 @@ env:
   key1: 'This is workflow env variable'
 
 jobs: 
+  Init-Job:
+    runs-on: ubuntu-latest
+    outputs:
+      ref: ${{ steps.ste-result.outputs.ref }}
+    steps:
+     - name: Step4
+       uses: actions/github-script@v4
+       id: set-result
+       with:
+         script: |
+           console.log("ref: ", "Hello!" )
+           return ref
+         result-encoding: string
+    
   First-Job:
     if: ${{ github.ref == 'refs/heads/main' }}
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
        - name: Step1
          uses: actions/checkout@v2
@@ -24,11 +38,6 @@ jobs:
        - name: Step3
          run: |
            echo ${{ steps.action-file.outputs.random-number }}
-       - name: Step4
-         uses: actions/github-script@v4
-         id: set-result
-         with:
-          script: return "Hello!"
-          result-encoding: string
+
 
          
