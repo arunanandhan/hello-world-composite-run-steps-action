@@ -15,7 +15,7 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: echo "Hello World"
+    - run: echo Hello ${{ inputs.name }}
       shell: bash
     - run: echo "::set-output name=random-id::$(echo $RANDOM)"
       id: random
