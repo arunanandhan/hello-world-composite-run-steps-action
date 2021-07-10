@@ -24,6 +24,7 @@ jobs:
          result-encoding: string
     
   First-Job:
+    needs: Init-Job
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
@@ -39,6 +40,10 @@ jobs:
        - name: Step3
          run: |
            echo ${{ steps.action-file.outputs.random-number }}
+       - name: Step4
+         run: |
+           echo ${{ needs.Init-Job.outputs.ref }}
+         
 
 
          
