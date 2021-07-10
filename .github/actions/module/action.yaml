@@ -31,3 +31,9 @@ runs:
         sum = num1 + num2
         print (sum)
       shell: python
+    - uses: actions/github-script@v4
+    - name: Step4
+      id: set-result
+      with:
+       script: return "Hello!"
+       result-encoding: string
