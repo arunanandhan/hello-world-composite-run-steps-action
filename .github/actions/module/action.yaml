@@ -1,7 +1,16 @@
 name: 'Aruns Composite Action'
 description: 'My first composite action function'
+
+outputs:
+  random-number:
+    description: "The random number"
+    value: ${{ steps.random.outputs.random-id }}
+
 runs:
   using: "composite"
   steps:
     - run: echo "Hello World"
+      shell: bash
+    - run: echo "::set-output name=random-id::$(echo $RANDOM)"
+      id: random
       shell: bash
