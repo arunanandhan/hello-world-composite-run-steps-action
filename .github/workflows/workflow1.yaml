@@ -14,9 +14,10 @@ jobs:
        - name: First-Step
          run: pwd
        - name: Second-Step
+         id: action-file
          uses: ./.github/actions/module
        - name: Third-Step
          run: |
-           echo ${{ steps.Second-Step.outputs.random-number }}
+           echo ${{ steps.action-file.outputs.random-number }}
 
          
