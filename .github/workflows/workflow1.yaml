@@ -13,11 +13,12 @@ jobs:
     outputs:
       ref: ${{ steps.ste-result.outputs.ref }}
     steps:
-     - name: Step4
+     - name: Step1
        uses: actions/github-script@v4
        id: set-result
        with:
          script: |
+           var ref = '123'
            console.log("ref: ", "Hello!" )
            return ref
          result-encoding: string
