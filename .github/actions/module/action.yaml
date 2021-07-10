@@ -1,6 +1,12 @@
 name: 'Aruns Composite Action'
 description: 'My first composite action function'
 
+inputs:
+  name: 
+    description: 'Name of the Person'
+    required: true
+    default: 'this_is_default_name'
+
 outputs:
   random-number:
     description: "The random number"
