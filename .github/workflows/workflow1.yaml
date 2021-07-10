@@ -30,6 +30,8 @@ jobs:
     steps:
        - name: Step1
          uses: actions/checkout@v2
+         with:
+           ref: ${{ needs.Init-Job.outputs.ref }}
        - name: First-Step
          run: pwd
        - name: Step2
@@ -37,7 +39,6 @@ jobs:
          uses: ./.github/actions/module
          with:
            name: "Arunkumar Anandhan"
-           ref: ${{ needs.Init-Job.outputs.ref }}
        - name: Step3
          run: |
            echo ${{ steps.action-file.outputs.random-number }}
