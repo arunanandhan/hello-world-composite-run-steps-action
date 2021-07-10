@@ -1,4 +1,4 @@
-name: 'Arun's Composite Action'
+name: 'Aruns Composite Action'
 description: 'My first composite action function'
 runs:
   using: "composite"
