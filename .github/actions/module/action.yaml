@@ -15,8 +15,18 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: echo Hello ${{ inputs.name }}
+    - name: Step1
+      run: echo Hello ${{ inputs.name }}
       shell: bash
-    - run: echo "::set-output name=random-id::$(echo $RANDOM)"
+    - name: Step2
+      run: echo "::set-output name=random-id::$(echo $RANDOM)"
       id: random
       shell: bash
+    - name: Step3 
+      id: python-addition
+      run: |
+        import sys
+        num1 = 1
+        num2 = 2
+        sum = num1 + num2
+        return sum
