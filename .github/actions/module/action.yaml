@@ -1,7 +1,6 @@
-name: 'Arun's Composite  Action'
+name: 'Arun's Composite Action'
 description: 'My first composite action function'
 runs:
   using: "composite"
   steps:
     - run: echo "Hello World"
-    
