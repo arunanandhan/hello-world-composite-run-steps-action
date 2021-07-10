@@ -9,6 +9,8 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-20.04
     steps:
+       - name: Initial-Step
+         uses: actions/checkout@v2
        - name: First-Step
          run: pwd
        - name: Second-Step
