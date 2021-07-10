@@ -12,20 +12,23 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-20.04
     steps:
-       - name: Initial-Step
+       - name: Step1
          uses: actions/checkout@v2
        - name: First-Step
          run: pwd
-       - name: Second-Step
+       - name: Step2
          id: action-file
          uses: ./.github/actions/module
          with:
            name: "Arunkumar Anandhan"
-       - name: Third-Step
+       - name: Step3
          run: |
            echo ${{ steps.action-file.outputs.random-number }}
-       - name: Fourth-Step
-         run: |
-           echo $key1
+       - name: Step4
+         uses: actions/github-script@v4
+         id: set-result
+         with:
+          script: return "Hello!"
+          result-encoding: string
 
          
