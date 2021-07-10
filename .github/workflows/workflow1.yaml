@@ -12,5 +12,5 @@ jobs:
        - name: First-Step
          run: pwd
        - name: Second-Step
-         uses: ./github/actions/module
+         uses: ./.github/actions/module
          
