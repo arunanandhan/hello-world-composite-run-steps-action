@@ -36,7 +36,7 @@ jobs:
          run: |
            echo ${{ steps.action-file.outputs.random-number }}
        - name: Step4
-         run:
+         run: |
            echo "My Location is $Location"
-           echo ${{ github.event }}
+           echo ${{ github.event.comment.body }}
          
