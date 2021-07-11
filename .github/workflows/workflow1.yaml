@@ -5,8 +5,7 @@ on:
     branches: [ main ]
 
 env:
-  key1: 'This is workflow env variable'
-  location: Utah
+  Location: 'Utah'
 
 jobs:  
   First-Job:
@@ -27,4 +26,6 @@ jobs:
            echo ${{ steps.action-file.outputs.random-number }}
        - name: Step4
          run:
-           echo "My Location is $location"
+           echo "My Location is $Location"
+           
+         
