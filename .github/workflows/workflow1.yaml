@@ -38,5 +38,4 @@ jobs:
        - name: Step4
          run: |
            echo "My Location is $Location"
-           echo ${{ github.event.comment.body }}
          
