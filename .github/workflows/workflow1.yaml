@@ -12,7 +12,9 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Step1
-        run: dir
+        run: |
+          pwd
+          dir
   First-Job:
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
