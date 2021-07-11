@@ -2,7 +2,8 @@ name: 'Aruns Composite Workflow'
 
 on: 
   push:
-    branches: [ main ]
+    branches: 
+      - main
     paths:
       - ".github/*"
 
