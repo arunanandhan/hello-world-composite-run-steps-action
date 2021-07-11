@@ -5,6 +5,7 @@ on:
     branches: 
       - main
     paths:
+      - ".github/actions/module/action.yaml"
       - ".github/workflows/workflow1.yaml"
 
 env:
