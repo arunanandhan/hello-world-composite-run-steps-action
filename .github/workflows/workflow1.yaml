@@ -6,6 +6,7 @@ on:
 
 env:
   key1: 'This is workflow env variable'
+  location: Utah
 
 jobs:  
   First-Job:
@@ -24,6 +25,6 @@ jobs:
        - name: Step3
          run: |
            echo ${{ steps.action-file.outputs.random-number }}
-           echo "::group::My title"
-           echo "Inside group"
-           echo "::endgroup::"
+       - name: Step4
+         run:
+           echo "My Location is $location"
