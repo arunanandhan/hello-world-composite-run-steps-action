@@ -5,7 +5,7 @@ on:
     branches: 
       - main
     paths:
-      - ".github/*"
+      - ".github/workflows/workflow1.yaml"
 
 env:
   Location: 'Utah'
