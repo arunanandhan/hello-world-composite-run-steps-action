@@ -14,8 +14,8 @@ jobs:
       - name: Step1
         run: |
           pwd
-          dir
   First-Job:
+    needs: Main-Dependency-Job
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
