@@ -24,4 +24,6 @@ jobs:
        - name: Step3
          run: |
            echo ${{ steps.action-file.outputs.random-number }}
-           echo "::debug::This is setting debug message"
+           echo "::group::My title"
+           echo "Inside group"
+           echo "::endgroup::"
