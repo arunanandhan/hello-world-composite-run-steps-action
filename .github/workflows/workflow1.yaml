@@ -24,4 +24,4 @@ jobs:
        - name: Step3
          run: |
            echo ${{ steps.action-file.outputs.random-number }}
-           echo "::add-mask::This is Mask"
+           echo "::debug::This is setting debug message"
