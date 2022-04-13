@@ -1,4 +1,4 @@
-name: 'Aruns Composite Workflow'
+name: 'Aruns Composite Workflow - Test'
 
 on: 
   push:
