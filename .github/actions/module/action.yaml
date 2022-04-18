@@ -8,6 +8,7 @@ inputs:
     default: 'this_is_default_name'
 
 outputs:
+
   random-number:
     description: "The random number"
     value: ${{ steps.random.outputs.random-id }}
